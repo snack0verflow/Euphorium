@@ -20,7 +20,7 @@ public class Home extends javax.swing.JFrame {
      */
     Connection co=null;
     public Home() {
-        //co=SqlConn.dbCon();
+        co=SqlConn.dbCon();
         initComponents();
         jPanel1.setBackground(new Color(0,0,0,150));
         jPanel4.setVisible(false);
@@ -168,7 +168,7 @@ public class Home extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(51, 51, 51));
         jComboBox1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Physician", "Nurse", "Patient" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse", "Patient" }));
         jComboBox1.setToolTipText("");
         jComboBox1.setBorder(null);
         jPanel3.add(jComboBox1);
@@ -178,9 +178,9 @@ public class Home extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Sign-Up");
         jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
             }
         });
         jPanel3.add(jButton3);
@@ -331,7 +331,7 @@ public class Home extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 500));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Abid Abdullah\\Desktop\\lll.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/lll.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, 0, 770, 500));
 
@@ -360,40 +360,42 @@ public class Home extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
         //DB management code
-//        try {
-//				String q="select * from cred where user=? and pass=?";
-//				PreparedStatement pst=co.prepareStatement(q);
-//				pst.setString(1, jTextField2.getText() );
-//				pst.setString(2, jPasswordField1.getText());
-//				ResultSet rs=pst.executeQuery();
-//				int c=0;
-//				while(rs.next())
-//				{
-//					c++;
-//				}
-//				if(c==1)
-//				{
-//					pst.close();
-//					rs.close();
-//					this.dispose();
-//					new Home().setVisible(true);
-//				}
-//				else
-//				{
-//					JOptionPane.showMessageDialog(null, "Invalid Username/Password combination");
-//				}
-//				
-//				
-//				}
-//				catch(Exception ex) {
-//					JOptionPane.showMessageDialog(null, ex);
-//				};
-        new Doctor().setVisible(true);        // TODO add your handling code here:
+        try {
+				String q="select * from cred where username=? and password=?";
+				PreparedStatement pst=co.prepareStatement(q);
+				pst.setString(1, jTextField2.getText() );
+				pst.setString(2, jPasswordField1.getText());
+				ResultSet rs=pst.executeQuery();
+				int c=0;
+                                String role="";
+				while(rs.next())
+				{
+                                        role=rs.getString(4);
+					c++;
+                                        break;
+				}
+				if(c==1)
+				{
+					pst.close();
+					rs.close();
+					this.dispose();
+                                        if(role.equals("Doctor"))
+                                            new Doctor().setVisible(true);
+                                        if(role.equals("Nurse"))
+                                            new Doctor_1().setVisible(true);
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "Invalid Username/Password combination");
+				}
+				
+				
+				}
+				catch(Exception ex) {
+					JOptionPane.showMessageDialog(null, ex);
+				};
+        //new Doctor().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         jPanel3.setVisible(false);
@@ -404,6 +406,61 @@ public class Home extends javax.swing.JFrame {
         jPanel3.setVisible(true);
         jButton2.setVisible(false);
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        try{
+        String q="select * from cred where username=? and password=?";
+				PreparedStatement pst=co.prepareStatement(q);
+				pst.setString(1, jTextField3.getText() );
+				pst.setString(2, jPasswordField2.getText());
+				ResultSet rs=pst.executeQuery();
+				int c=0;
+                                String role="";
+				while(rs.next())
+				{
+                                        //role=rs.getString(4);
+					c++;
+                                        JOptionPane.showMessageDialog(null,"Username already exists");
+                                        break;
+				}
+                                if(c==0)
+                                {
+                                    String u=jTextField3.getText();
+                                    String e=jTextField4.getText();
+                                    String p=jPasswordField2.getText();
+                                    String pp=jPasswordField3.getText();
+                                    String r="";
+                                    switch(jComboBox1.getSelectedIndex())
+                                    {
+                                        case 0: r="Doctor";
+                                        break;
+                                        case 1: r="Nurse";
+                                        break;
+                                        case 2: r="Patient";
+                                    }
+                                    if(pp.equals(p))
+                                    {
+                                        String sta="";
+                                        sta = "insert into cred values(null,?,?,?,?)";
+                                        PreparedStatement ps=co.prepareStatement(sta);
+                                        ps.setString(1,u);
+                                        ps.setString(2,p);
+                                        ps.setString(3,r);
+                                        ps.setString(4,e);
+                                        ps.executeUpdate();
+                                        JOptionPane.showMessageDialog(null,"Sign-up successful");
+                                        jPanel3.setVisible(false);
+                                        jButton2.setVisible(true);
+                                        
+                                    }
+                                    
+                                }
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments

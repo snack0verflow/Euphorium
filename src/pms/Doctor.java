@@ -159,12 +159,12 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jPanel6.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
         jPanel2.add(jPanel6);
         jPanel6.setBounds(20, 10, 600, 380);
 
-        jPanel7.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
@@ -186,12 +186,12 @@ public class Doctor extends javax.swing.JFrame {
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 380);
 
-        jPanel11.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(null);
         jPanel2.add(jPanel11);
         jPanel11.setBounds(10, 10, 610, 380);
 
-        jPanel12.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
         jPanel12.setLayout(null);
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(

@@ -12,8 +12,8 @@ public class SqlConn
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/straffic?useSSL=false&"+"user=system&password=manager");
-			//JOptionPane.showMessageDialog(null, "connected");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/euphorium?useSSL=false&"+"user=system&password=manager");
+			JOptionPane.showMessageDialog(null, "connected");
 			return con;
 		}
 		catch(Exception e) {e.printStackTrace();
