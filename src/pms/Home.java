@@ -361,20 +361,21 @@ public class Home extends javax.swing.JFrame {
         this.dispose();
         //DB management code
         try {
-				String q="select * from cred where username=? and password=?";
+				String q="select * from cred where username=?";
 				PreparedStatement pst=co.prepareStatement(q);
 				pst.setString(1, jTextField2.getText() );
-				pst.setString(2, jPasswordField1.getText());
+				String candidate = jPasswordField1.getText();
 				ResultSet rs=pst.executeQuery();
 				int c=0;
-                                String role="";
+                                String role="", hashed = "";
 				while(rs.next())
 				{
+                                        hashed = rs.getString(3); // THE HASHED PASSWORD IN THE TABLE
                                         role=rs.getString(4);
 					c++;
                                         break;
 				}
-				if(c==1)
+				if(c==1 && BCrypt.checkpw(candidate, hashed))
 				{
 					pst.close();
 					rs.close();
@@ -443,8 +444,9 @@ public class Home extends javax.swing.JFrame {
                                         String sta="";
                                         sta = "insert into cred values(null,?,?,?,?)";
                                         PreparedStatement ps=co.prepareStatement(sta);
+                                        String hashed = BCrypt.hashpw(p, BCrypt.gensalt());
                                         ps.setString(1,u);
-                                        ps.setString(2,p);
+                                        ps.setString(2,hashed);
                                         ps.setString(3,r);
                                         ps.setString(4,e);
                                         ps.executeUpdate();
