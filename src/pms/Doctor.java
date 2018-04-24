@@ -5,7 +5,12 @@
  */
 package pms;
 
-import java.awt.Color;
+import java.sql.*;
+import java.awt.*;
+import java.util.Properties;
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 
 /**
  *
@@ -16,12 +21,30 @@ public class Doctor extends javax.swing.JFrame {
     /**
      * Creates new form Doctor
      */
+    UtilDateModel model;
+    Properties px;
+    JDatePanelImpl datePanel;
+    JDatePickerImpl datePicker;
+    
+    Connection co=null;
     public Doctor() {
         initComponents();
         jPanel3.setBackground(new Color(0,0,0,100));
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
         jPanel12.setVisible(false);
+        co=SqlConn.dbCon();
+        model = new UtilDateModel();
+		Properties px = new Properties();
+		px.put("text.today", "Today");
+		px.put("text.month", "Month");
+		px.put("text.year", "Year");
+		datePanel = new JDatePanelImpl(model, px);
+		// Don't know about the formatter, but there it is...
+		datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+		datePicker.setBounds(447, 85, 130, 30);
+                
+                jPanel11.add(datePicker);
     }
 
     /**
@@ -52,6 +75,28 @@ public class Doctor extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel11 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jTextField1 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jTextField7 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
         jPanel12 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -162,7 +207,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
         jPanel2.add(jPanel6);
-        jPanel6.setBounds(20, 10, 600, 380);
+        jPanel6.setBounds(20, 10, 600, 340);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
@@ -184,10 +229,103 @@ public class Doctor extends javax.swing.JFrame {
         jScrollPane2.setBounds(38, 14, 452, 355);
 
         jPanel2.add(jPanel7);
-        jPanel7.setBounds(10, 10, 610, 380);
+        jPanel7.setBounds(10, 10, 610, 350);
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(null);
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 51));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Submit");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jPanel11.add(jButton2);
+        jButton2.setBounds(530, 350, 80, 29);
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel13.setText("Password");
+        jPanel11.add(jLabel13);
+        jLabel13.setBounds(30, 320, 100, 20);
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel14.setText("Name");
+        jPanel11.add(jLabel14);
+        jLabel14.setBounds(30, 30, 60, 20);
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel15.setText("Gender");
+        jPanel11.add(jLabel15);
+        jLabel15.setBounds(30, 60, 70, 20);
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel16.setText("Date of birth");
+        jPanel11.add(jLabel16);
+        jLabel16.setBounds(30, 90, 100, 20);
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel17.setText("Height");
+        jPanel11.add(jLabel17);
+        jLabel17.setBounds(30, 130, 100, 20);
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel18.setText("Weight");
+        jPanel11.add(jLabel18);
+        jLabel18.setBounds(30, 160, 100, 20);
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel19.setText("Genetics");
+        jPanel11.add(jLabel19);
+        jLabel19.setBounds(30, 190, 100, 20);
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel20.setText("Allergies");
+        jPanel11.add(jLabel20);
+        jLabel20.setBounds(30, 220, 100, 20);
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel21.setText("Blood group");
+        jPanel11.add(jLabel21);
+        jLabel21.setBounds(30, 250, 100, 20);
+
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel22.setText("E-Mail");
+        jPanel11.add(jLabel22);
+        jLabel22.setBounds(30, 290, 100, 20);
+        jPanel11.add(jSeparator1);
+        jSeparator1.setBounds(30, 280, 560, 10);
+        jPanel11.add(jSeparator2);
+        jSeparator2.setBounds(30, 120, 560, 10);
+        jPanel11.add(jTextField1);
+        jTextField1.setBounds(409, 30, 170, 20);
+
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "O+", "O-" }));
+        jComboBox1.setBorder(null);
+        jPanel11.add(jComboBox1);
+        jComboBox1.setBounds(410, 250, 170, 24);
+        jPanel11.add(jTextField2);
+        jTextField2.setBounds(410, 130, 170, 20);
+        jPanel11.add(jTextField4);
+        jTextField4.setBounds(410, 160, 170, 20);
+        jPanel11.add(jTextField5);
+        jTextField5.setBounds(410, 190, 170, 20);
+        jPanel11.add(jTextField6);
+        jTextField6.setBounds(410, 290, 170, 20);
+
+        jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        jComboBox2.setBorder(null);
+        jPanel11.add(jComboBox2);
+        jComboBox2.setBounds(410, 60, 170, 24);
+        jPanel11.add(jTextField7);
+        jTextField7.setBounds(410, 220, 170, 20);
+        jPanel11.add(jPasswordField1);
+        jPasswordField1.setBounds(411, 320, 170, 20);
+
         jPanel2.add(jPanel11);
         jPanel11.setBounds(10, 10, 610, 380);
 
@@ -211,7 +349,7 @@ public class Doctor extends javax.swing.JFrame {
         jScrollPane3.setBounds(62, 11, 452, 345);
 
         jPanel2.add(jPanel12);
-        jPanel12.setBounds(10, 20, 610, 370);
+        jPanel12.setBounds(10, 20, 610, 340);
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 630, 400));
 
@@ -273,7 +411,40 @@ public class Doctor extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(881, 580));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    void insert_patient(String name,String gender, java.sql.Date dob, int height, int weight, String genetic, String allergies,
+						String bgrp,String email,String pass) throws Exception {
+		String sta="";
+        sta = "insert into cred values(null,?,?,?,?)";
+        PreparedStatement ps=co.prepareStatement(sta);
+		String hashed = BCrypt.hashpw(pass, BCrypt.gensalt());
+        ps.setString(1, name);
+    	ps.setString(2, hashed);
+        ps.setString(3,"Patient");
+        ps.setString(4, email);
+		ps.executeUpdate();
+                String dd="select max(uid) from cred;";
+                
+//		sta="select uid from cred where name="+name;
+//		PreparedStatement pss=co.prepareStatement(sta);
+//		ResultSet rr=pss.executeQuery();
+                ResultSet k=co.prepareStatement(dd).executeQuery();
+		int id=k.getInt(1);;
+		String sql = "INSERT INTO INFO VALUES(?,?,?,?,?,?,?,?,?,?);";
+		PreparedStatement pst = co.prepareStatement(sql);
+		pst.setString(1, gender);
+		pst.setDate(2, dob);
+		pst.setInt(3, height);
+		pst.setInt(4, weight);
+		pst.setString(5, genetic);
+		pst.setString(6, allergies);
+		pst.setString(7, "0"); // THE AMOUNT THE PATIENT HAS SPENT TILL NOW; THIS WILL GET UPDATED UPON EACH VISIT
+		pst.setString(8, bgrp);
+		pst.setInt(9, 5);
+		pst.setString(10, name);
+		pst.executeUpdate();
 
+	}
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         reset();
         jPanel4.setBackground(new Color(204,0,51));
@@ -309,6 +480,24 @@ public class Doctor extends javax.swing.JFrame {
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
         jPanel5.setVisible(false);       // TODO add your handling code here:
     }//GEN-LAST:event_jPanel3MouseEntered
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        String nm=jTextField1.getText(),gene=jTextField5.getText(),all=jTextField7.getText(),eml=jTextField6.getText(),pass=jPasswordField1.getText();
+        int ht=Integer.parseInt(jTextField2.getText()),wt=Integer.parseInt(jTextField4.getText());
+        java.util.Date selectedDate = (java.util.Date) datePicker.getModel().getValue();
+        java.sql.Date sqlDate = new java.sql.Date(selectedDate.getTime());
+        
+        String se=jComboBox2.getItemAt(jComboBox2.getSelectedIndex());
+        String bg=jComboBox1.getItemAt(jComboBox1.getSelectedIndex());
+        try
+        {
+            insert_patient(nm,se,sqlDate,ht,wt, gene, all,bg,eml, pass);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
     
     void reset()
     {
@@ -373,11 +562,24 @@ public class Doctor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -397,9 +599,18 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
