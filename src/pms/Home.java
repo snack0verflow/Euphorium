@@ -388,6 +388,7 @@ public class Home extends javax.swing.JFrame {
 				else
 				{
 					JOptionPane.showMessageDialog(null, "Invalid Username/Password combination");
+                                        new Home().setVisible(true);
 				}
 				
 				
@@ -410,10 +411,11 @@ public class Home extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         try{
-        String q="select * from cred where username=? and password=?";
+        String q="select * from cred where username=?";
 				PreparedStatement pst=co.prepareStatement(q);
 				pst.setString(1, jTextField3.getText() );
-				pst.setString(2, jPasswordField2.getText());
+				//pst.setString(2, jPasswordField2.getText());
+                                System.out.println(jTextField3.getText());
 				ResultSet rs=pst.executeQuery();
 				int c=0;
                                 String role="";
@@ -454,6 +456,10 @@ public class Home extends javax.swing.JFrame {
                                         jPanel3.setVisible(false);
                                         jButton2.setVisible(true);
                                         
+                                    }
+                                    else
+                                    {
+                                        JOptionPane.showMessageDialog(null, "Passwords don't match");
                                     }
                                     
                                 }
