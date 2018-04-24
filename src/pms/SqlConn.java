@@ -13,7 +13,7 @@ public class SqlConn
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/euphorium?useSSL=false&"+"user=system&password=manager");
-			JOptionPane.showMessageDialog(null, "connected");
+			//JOptionPane.showMessageDialog(null, "connected");
 			return con;
 		}
 		catch(Exception e) {e.printStackTrace();
