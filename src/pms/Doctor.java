@@ -94,6 +94,31 @@ public class Doctor extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        jTextField16 = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        jTextField20 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
+        jLabel42 = new javax.swing.JLabel();
+        jTextField22 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -280,27 +305,132 @@ public class Doctor extends javax.swing.JFrame {
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
+
+        jButton5.setText("Add Visit");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton5);
+        jButton5.setBounds(250, 300, 90, 25);
+
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jTextField12);
+        jTextField12.setBounds(20, 40, 60, 22);
+
+        jLabel32.setText("Patient ID");
+        jPanel6.add(jLabel32);
+        jLabel32.setBounds(20, 20, 60, 16);
+
+        jLabel33.setText("Doctor ID");
+        jPanel6.add(jLabel33);
+        jLabel33.setBounds(100, 20, 60, 16);
+        jPanel6.add(jTextField13);
+        jTextField13.setBounds(100, 40, 60, 22);
+
+        jLabel34.setText("BP");
+        jPanel6.add(jLabel34);
+        jLabel34.setBounds(20, 90, 20, 16);
+
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jTextField14);
+        jTextField14.setBounds(20, 110, 40, 22);
+
+        jLabel35.setText("RBC");
+        jPanel6.add(jLabel35);
+        jLabel35.setBounds(70, 90, 23, 16);
+        jPanel6.add(jTextField15);
+        jTextField15.setBounds(70, 110, 40, 22);
+
+        jLabel36.setText("WBC");
+        jPanel6.add(jLabel36);
+        jLabel36.setBounds(120, 90, 27, 16);
+        jPanel6.add(jTextField16);
+        jTextField16.setBounds(120, 110, 40, 22);
+
+        jLabel37.setText("BRate");
+        jPanel6.add(jLabel37);
+        jLabel37.setBounds(170, 90, 33, 16);
+        jPanel6.add(jTextField17);
+        jTextField17.setBounds(170, 110, 40, 22);
+
+        jLabel38.setText("HRate");
+        jPanel6.add(jLabel38);
+        jLabel38.setBounds(220, 90, 34, 16);
+        jPanel6.add(jTextField18);
+        jTextField18.setBounds(220, 110, 40, 22);
+
+        jLabel39.setText("Sugar");
+        jPanel6.add(jLabel39);
+        jLabel39.setBounds(270, 90, 34, 16);
+        jPanel6.add(jTextField19);
+        jTextField19.setBounds(270, 110, 40, 22);
+
+        jLabel40.setText("Temp");
+        jPanel6.add(jLabel40);
+        jLabel40.setBounds(320, 90, 33, 16);
+        jPanel6.add(jTextField20);
+        jTextField20.setBounds(320, 110, 50, 22);
+
+        jLabel41.setText("Amount Spent");
+        jPanel6.add(jLabel41);
+        jLabel41.setBounds(180, 20, 90, 16);
+        jPanel6.add(jTextField21);
+        jTextField21.setBounds(180, 40, 80, 22);
+
+        jLabel42.setText("Patient Remarks");
+        jPanel6.add(jLabel42);
+        jLabel42.setBounds(20, 160, 100, 16);
+        jPanel6.add(jTextField22);
+        jTextField22.setBounds(20, 180, 570, 22);
+
+        jLabel43.setText("Doctor's Remarks");
+        jPanel6.add(jLabel43);
+        jLabel43.setBounds(20, 230, 110, 16);
+        jPanel6.add(jTextField23);
+        jTextField23.setBounds(20, 250, 570, 22);
+
         jPanel2.add(jPanel6);
         jPanel6.setBounds(20, 10, 600, 340);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
 
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        jScrollPane2.setToolTipText("");
+
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "BType", "H(m)", "W(kg)", "Sex", "Contact", "Genetic", "Allergies", "Spent"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
+        if (jTable2.getColumnModel().getColumnCount() > 0) {
+            jTable2.getColumnModel().getColumn(0).setMinWidth(150);
+            jTable2.getColumnModel().getColumn(1).setResizable(false);
+            jTable2.getColumnModel().getColumn(1).setPreferredWidth(60);
+            jTable2.getColumnModel().getColumn(2).setResizable(false);
+            jTable2.getColumnModel().getColumn(2).setPreferredWidth(50);
+            jTable2.getColumnModel().getColumn(3).setResizable(false);
+            jTable2.getColumnModel().getColumn(3).setPreferredWidth(60);
+            jTable2.getColumnModel().getColumn(4).setMaxWidth(40);
+            jTable2.getColumnModel().getColumn(5).setMinWidth(100);
+        }
 
         jPanel7.add(jScrollPane2);
-        jScrollPane2.setBounds(38, 14, 452, 355);
+        jScrollPane2.setBounds(8, -1, 590, 350);
 
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 350);
@@ -374,7 +504,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jSeparator2);
         jSeparator2.setBounds(30, 120, 560, 10);
         jPanel11.add(jTextField1);
-        jTextField1.setBounds(409, 30, 170, 20);
+        jTextField1.setBounds(409, 30, 170, 22);
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "O+", "O-" }));
@@ -382,13 +512,13 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jComboBox1);
         jComboBox1.setBounds(410, 250, 170, 24);
         jPanel11.add(jTextField2);
-        jTextField2.setBounds(410, 130, 170, 20);
+        jTextField2.setBounds(410, 130, 170, 22);
         jPanel11.add(jTextField4);
-        jTextField4.setBounds(410, 160, 170, 20);
+        jTextField4.setBounds(410, 160, 170, 22);
         jPanel11.add(jTextField5);
-        jTextField5.setBounds(410, 190, 170, 20);
+        jTextField5.setBounds(410, 190, 170, 22);
         jPanel11.add(jTextField6);
-        jTextField6.setBounds(410, 290, 170, 20);
+        jTextField6.setBounds(410, 290, 170, 22);
 
         jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
@@ -396,9 +526,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jComboBox2);
         jComboBox2.setBounds(410, 60, 170, 24);
         jPanel11.add(jTextField7);
-        jTextField7.setBounds(410, 220, 170, 20);
+        jTextField7.setBounds(410, 220, 170, 22);
         jPanel11.add(jPasswordField1);
-        jPasswordField1.setBounds(411, 320, 170, 20);
+        jPasswordField1.setBounds(411, 320, 170, 22);
 
         jPanel2.add(jPanel11);
         jPanel11.setBounds(10, 10, 610, 380);
@@ -430,9 +560,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel13.add(jLabel26);
         jLabel26.setBounds(20, 40, 100, 20);
         jPanel13.add(jTextField3);
-        jTextField3.setBounds(130, 40, 170, 20);
+        jTextField3.setBounds(130, 40, 170, 22);
         jPanel13.add(jTextField8);
-        jTextField8.setBounds(130, 70, 170, 20);
+        jTextField8.setBounds(130, 70, 170, 22);
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel27.setText("Weight");
@@ -444,9 +574,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel13.add(jLabel28);
         jLabel28.setBounds(20, 100, 100, 20);
         jPanel13.add(jTextField9);
-        jTextField9.setBounds(130, 100, 170, 20);
+        jTextField9.setBounds(130, 100, 170, 22);
         jPanel13.add(jTextField10);
-        jTextField10.setBounds(130, 130, 170, 20);
+        jTextField10.setBounds(130, 130, 170, 22);
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel29.setText("Allergies");
@@ -734,6 +864,18 @@ public class Doctor extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
     
     
     void modify_patient(int patientID, String gender, int height, int weight, String genetic,
@@ -850,6 +992,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -879,7 +1022,19 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -909,7 +1064,19 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
+    private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
