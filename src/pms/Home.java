@@ -384,6 +384,8 @@ public class Home extends javax.swing.JFrame {
                                             new Doctor().setVisible(true);
                                         if(role.equals("Nurse"))
                                             new Doctor_1().setVisible(true);
+                                        if(role.equals("Patient"))
+                                            new Doctor_2(rs.getInt(1)).setVisible(true);
 				}
 				else
 				{
