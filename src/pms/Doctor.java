@@ -313,7 +313,7 @@ public class Doctor extends javax.swing.JFrame {
             }
         });
         jPanel6.add(jButton5);
-        jButton5.setBounds(250, 300, 90, 25);
+        jButton5.setBounds(250, 300, 90, 23);
 
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -321,21 +321,21 @@ public class Doctor extends javax.swing.JFrame {
             }
         });
         jPanel6.add(jTextField12);
-        jTextField12.setBounds(20, 40, 60, 22);
+        jTextField12.setBounds(20, 40, 60, 20);
 
         jLabel32.setText("Patient ID");
         jPanel6.add(jLabel32);
-        jLabel32.setBounds(20, 20, 60, 16);
+        jLabel32.setBounds(20, 20, 60, 14);
 
         jLabel33.setText("Doctor ID");
         jPanel6.add(jLabel33);
-        jLabel33.setBounds(100, 20, 60, 16);
+        jLabel33.setBounds(100, 20, 60, 14);
         jPanel6.add(jTextField13);
-        jTextField13.setBounds(100, 40, 60, 22);
+        jTextField13.setBounds(100, 40, 60, 20);
 
         jLabel34.setText("BP");
         jPanel6.add(jLabel34);
-        jLabel34.setBounds(20, 90, 20, 16);
+        jLabel34.setBounds(20, 90, 20, 14);
 
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,64 +343,64 @@ public class Doctor extends javax.swing.JFrame {
             }
         });
         jPanel6.add(jTextField14);
-        jTextField14.setBounds(20, 110, 40, 22);
+        jTextField14.setBounds(20, 110, 40, 20);
 
         jLabel35.setText("RBC");
         jPanel6.add(jLabel35);
-        jLabel35.setBounds(70, 90, 23, 16);
+        jLabel35.setBounds(70, 90, 20, 14);
         jPanel6.add(jTextField15);
-        jTextField15.setBounds(70, 110, 40, 22);
+        jTextField15.setBounds(70, 110, 40, 20);
 
         jLabel36.setText("WBC");
         jPanel6.add(jLabel36);
-        jLabel36.setBounds(120, 90, 27, 16);
+        jLabel36.setBounds(120, 90, 23, 14);
         jPanel6.add(jTextField16);
-        jTextField16.setBounds(120, 110, 40, 22);
+        jTextField16.setBounds(120, 110, 40, 20);
 
         jLabel37.setText("BRate");
         jPanel6.add(jLabel37);
-        jLabel37.setBounds(170, 90, 33, 16);
+        jLabel37.setBounds(170, 90, 29, 14);
         jPanel6.add(jTextField17);
-        jTextField17.setBounds(170, 110, 40, 22);
+        jTextField17.setBounds(170, 110, 40, 20);
 
         jLabel38.setText("HRate");
         jPanel6.add(jLabel38);
-        jLabel38.setBounds(220, 90, 34, 16);
+        jLabel38.setBounds(220, 90, 30, 14);
         jPanel6.add(jTextField18);
-        jTextField18.setBounds(220, 110, 40, 22);
+        jTextField18.setBounds(220, 110, 40, 20);
 
         jLabel39.setText("Sugar");
         jPanel6.add(jLabel39);
-        jLabel39.setBounds(270, 90, 34, 16);
+        jLabel39.setBounds(270, 90, 28, 14);
         jPanel6.add(jTextField19);
-        jTextField19.setBounds(270, 110, 40, 22);
+        jTextField19.setBounds(270, 110, 40, 20);
 
         jLabel40.setText("Temp");
         jPanel6.add(jLabel40);
-        jLabel40.setBounds(320, 90, 33, 16);
+        jLabel40.setBounds(320, 90, 26, 14);
         jPanel6.add(jTextField20);
-        jTextField20.setBounds(320, 110, 50, 22);
+        jTextField20.setBounds(320, 110, 50, 20);
 
         jLabel41.setText("Amount Spent");
         jPanel6.add(jLabel41);
-        jLabel41.setBounds(180, 20, 90, 16);
+        jLabel41.setBounds(180, 20, 90, 14);
         jPanel6.add(jTextField21);
-        jTextField21.setBounds(180, 40, 80, 22);
+        jTextField21.setBounds(180, 40, 80, 20);
 
         jLabel42.setText("Patient Remarks");
         jPanel6.add(jLabel42);
-        jLabel42.setBounds(20, 160, 100, 16);
+        jLabel42.setBounds(20, 160, 100, 14);
         jPanel6.add(jTextField22);
-        jTextField22.setBounds(20, 180, 570, 22);
+        jTextField22.setBounds(20, 180, 570, 20);
 
         jLabel43.setText("Doctor's Remarks");
         jPanel6.add(jLabel43);
-        jLabel43.setBounds(20, 230, 110, 16);
+        jLabel43.setBounds(20, 230, 110, 14);
         jPanel6.add(jTextField23);
-        jTextField23.setBounds(20, 250, 570, 22);
+        jTextField23.setBounds(20, 250, 570, 20);
 
         jPanel2.add(jPanel6);
-        jPanel6.setBounds(20, 10, 600, 340);
+        jPanel6.setBounds(10, 10, 610, 350);
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
@@ -504,7 +504,7 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jSeparator2);
         jSeparator2.setBounds(30, 120, 560, 10);
         jPanel11.add(jTextField1);
-        jTextField1.setBounds(409, 30, 170, 22);
+        jTextField1.setBounds(409, 30, 170, 20);
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A+", "A-", "B+", "B-", "O+", "O-" }));
@@ -512,13 +512,13 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jComboBox1);
         jComboBox1.setBounds(410, 250, 170, 24);
         jPanel11.add(jTextField2);
-        jTextField2.setBounds(410, 130, 170, 22);
+        jTextField2.setBounds(410, 130, 170, 20);
         jPanel11.add(jTextField4);
-        jTextField4.setBounds(410, 160, 170, 22);
+        jTextField4.setBounds(410, 160, 170, 20);
         jPanel11.add(jTextField5);
-        jTextField5.setBounds(410, 190, 170, 22);
+        jTextField5.setBounds(410, 190, 170, 20);
         jPanel11.add(jTextField6);
-        jTextField6.setBounds(410, 290, 170, 22);
+        jTextField6.setBounds(410, 290, 170, 20);
 
         jComboBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
@@ -526,9 +526,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel11.add(jComboBox2);
         jComboBox2.setBounds(410, 60, 170, 24);
         jPanel11.add(jTextField7);
-        jTextField7.setBounds(410, 220, 170, 22);
+        jTextField7.setBounds(410, 220, 170, 20);
         jPanel11.add(jPasswordField1);
-        jPasswordField1.setBounds(411, 320, 170, 22);
+        jPasswordField1.setBounds(411, 320, 170, 20);
 
         jPanel2.add(jPanel11);
         jPanel11.setBounds(10, 10, 610, 380);
@@ -560,9 +560,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel13.add(jLabel26);
         jLabel26.setBounds(20, 40, 100, 20);
         jPanel13.add(jTextField3);
-        jTextField3.setBounds(130, 40, 170, 22);
+        jTextField3.setBounds(130, 40, 170, 20);
         jPanel13.add(jTextField8);
-        jTextField8.setBounds(130, 70, 170, 22);
+        jTextField8.setBounds(130, 70, 170, 20);
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel27.setText("Weight");
@@ -574,9 +574,9 @@ public class Doctor extends javax.swing.JFrame {
         jPanel13.add(jLabel28);
         jLabel28.setBounds(20, 100, 100, 20);
         jPanel13.add(jTextField9);
-        jTextField9.setBounds(130, 100, 170, 22);
+        jTextField9.setBounds(130, 100, 170, 20);
         jPanel13.add(jTextField10);
-        jTextField10.setBounds(130, 130, 170, 22);
+        jTextField10.setBounds(130, 130, 170, 20);
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel29.setText("Allergies");

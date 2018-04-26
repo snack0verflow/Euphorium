@@ -168,16 +168,14 @@ public class Home extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(51, 51, 51));
         jComboBox1.setFont(new java.awt.Font("Segoe UI Light", 0, 14)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse", "Patient" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Doctor", "Nurse" }));
         jComboBox1.setToolTipText("");
-        jComboBox1.setBorder(null);
         jPanel3.add(jComboBox1);
-        jComboBox1.setBounds(115, 305, 110, 24);
+        jComboBox1.setBounds(115, 305, 110, 26);
 
         jButton3.setBackground(new java.awt.Color(204, 0, 51));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Sign-Up");
-        jButton3.setBorder(null);
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -277,7 +275,6 @@ public class Home extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(204, 0, 51));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Log-in");
-        jButton2.setBorder(null);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -377,15 +374,18 @@ public class Home extends javax.swing.JFrame {
 				}
 				if(c==1 && BCrypt.checkpw(candidate, hashed))
 				{
-					pst.close();
-					rs.close();
+					
+					
 					this.dispose();
                                         if(role.equals("Doctor"))
                                             new Doctor().setVisible(true);
                                         if(role.equals("Nurse"))
-                                            new Doctor_1().setVisible(true);
+                                            new Nurse().setVisible(true);
                                         if(role.equals("Patient"))
-                                            new Doctor_2(rs.getInt(1)).setVisible(true);
+                                            new Patient(rs.getInt(1)).setVisible(true);
+                                        float ff=Float.parseFloat("3.14");
+                                        rs.close();
+                                        pst.close();
 				}
 				else
 				{
@@ -396,6 +396,7 @@ public class Home extends javax.swing.JFrame {
 				
 				}
 				catch(Exception ex) {
+                                    ex.printStackTrace();
 					JOptionPane.showMessageDialog(null, ex);
 				};
         //new Doctor().setVisible(true);        // TODO add your handling code here:
@@ -441,7 +442,6 @@ public class Home extends javax.swing.JFrame {
                                         break;
                                         case 1: r="Nurse";
                                         break;
-                                        case 2: r="Patient";
                                     }
                                     if(pp.equals(p))
                                     {

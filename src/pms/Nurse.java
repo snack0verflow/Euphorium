@@ -6,26 +6,22 @@
 package pms;
 
 import java.awt.Color;
-import java.sql.*;
 
 /**
  *
  * @author Abid
  */
-public class Doctor_2 extends javax.swing.JFrame {
+public class Nurse extends javax.swing.JFrame {
 
     /**
      * Creates new form Doctor
      */
-    static Connection co = null; 
-    static int user_id = 0;
-    public Doctor_2(int id) {
-        co = SqlConn.dbCon();
+    public Nurse() {
         initComponents();
         jPanel3.setBackground(new Color(0,0,0,100));
         jPanel7.setVisible(false);
-        user_id = id;
-        setValues();
+        jPanel11.setVisible(false);
+        jPanel12.setVisible(false);
     }
 
     /**
@@ -39,34 +35,23 @@ public class Doctor_2 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -90,15 +75,15 @@ public class Doctor_2 extends javax.swing.JFrame {
         });
         jPanel4.setLayout(null);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Clock_32px.png"))); // NOI18N
+        jPanel4.add(jLabel4);
+        jLabel4.setBounds(10, 10, 32, 30);
+
         jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Your Information");
+        jLabel5.setText("Join session");
         jPanel4.add(jLabel5);
-        jLabel5.setBounds(50, 15, 150, 20);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Heart_with_Pulse_32px_1.png"))); // NOI18N
-        jPanel4.add(jLabel6);
-        jLabel6.setBounds(10, 10, 32, 30);
+        jLabel5.setBounds(50, 15, 90, 16);
 
         jPanel1.add(jPanel4);
         jPanel4.setBounds(0, 0, 250, 50);
@@ -111,99 +96,47 @@ public class Doctor_2 extends javax.swing.JFrame {
         });
         jPanel8.setLayout(null);
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Heart_with_Pulse_32px_1.png"))); // NOI18N
+        jPanel8.add(jLabel6);
+        jLabel6.setBounds(10, 10, 32, 30);
+
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Your Visits");
+        jLabel7.setText("Patient Record");
         jPanel8.add(jLabel7);
         jLabel7.setBounds(50, 15, 110, 16);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Clock_32px.png"))); // NOI18N
-        jPanel8.add(jLabel4);
-        jLabel4.setBounds(10, 10, 32, 30);
-
         jPanel1.add(jPanel8);
         jPanel8.setBounds(0, 50, 250, 50);
+
+        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
+        });
+        jPanel9.setLayout(null);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Being_Sick_32px_1.png"))); // NOI18N
+        jPanel9.add(jLabel8);
+        jLabel8.setBounds(10, 10, 32, 30);
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Update patient vitals");
+        jPanel9.add(jLabel9);
+        jLabel9.setBounds(50, 13, 160, 20);
+
+        jPanel1.add(jPanel9);
+        jPanel9.setBounds(0, 100, 250, 50);
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 250, 400));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 102, 102));
         jPanel6.setLayout(null);
-
-        jLabel8.setText("Patient ID");
-        jPanel6.add(jLabel8);
-        jLabel8.setBounds(40, 10, 70, 16);
-
-        jLabel9.setText("Name");
-        jPanel6.add(jLabel9);
-        jLabel9.setBounds(40, 50, 60, 16);
-
-        jLabel10.setText("Birthday");
-        jPanel6.add(jLabel10);
-        jLabel10.setBounds(40, 90, 70, 16);
-
-        jLabel11.setText("Sex");
-        jPanel6.add(jLabel11);
-        jLabel11.setBounds(40, 130, 50, 16);
-
-        jLabel13.setText("Height");
-        jPanel6.add(jLabel13);
-        jLabel13.setBounds(40, 170, 60, 16);
-
-        jLabel14.setText("Weight");
-        jPanel6.add(jLabel14);
-        jLabel14.setBounds(40, 210, 60, 16);
-
-        jLabel15.setText("Blood Type");
-        jPanel6.add(jLabel15);
-        jLabel15.setBounds(40, 250, 80, 16);
-
-        jLabel16.setText("Allergies");
-        jPanel6.add(jLabel16);
-        jLabel16.setBounds(40, 290, 80, 16);
-
-        jLabel17.setText("Genetic Conditions");
-        jPanel6.add(jLabel17);
-        jLabel17.setBounds(40, 330, 105, 16);
-
-        jLabel18.setText("jLabel18");
-        jPanel6.add(jLabel18);
-        jLabel18.setBounds(240, 10, 48, 16);
-
-        jLabel19.setText("jLabel19");
-        jPanel6.add(jLabel19);
-        jLabel19.setBounds(240, 50, 48, 16);
-
-        jLabel20.setText("jLabel20");
-        jPanel6.add(jLabel20);
-        jLabel20.setBounds(240, 90, 48, 16);
-
-        jLabel21.setText("jLabel21");
-        jPanel6.add(jLabel21);
-        jLabel21.setBounds(240, 130, 48, 16);
-
-        jLabel22.setText("jLabel22");
-        jPanel6.add(jLabel22);
-        jLabel22.setBounds(240, 170, 48, 16);
-
-        jLabel23.setText("jLabel23");
-        jPanel6.add(jLabel23);
-        jLabel23.setBounds(240, 210, 48, 16);
-
-        jLabel24.setText("jLabel24");
-        jPanel6.add(jLabel24);
-        jLabel24.setBounds(240, 250, 48, 16);
-
-        jLabel25.setText("jLabel25");
-        jPanel6.add(jLabel25);
-        jLabel25.setBounds(240, 290, 48, 16);
-
-        jLabel26.setText("jLabel26");
-        jPanel6.add(jLabel26);
-        jLabel26.setBounds(240, 330, 48, 16);
-
         jPanel2.add(jPanel6);
         jPanel6.setBounds(20, 10, 600, 380);
 
@@ -228,6 +161,33 @@ public class Doctor_2 extends javax.swing.JFrame {
 
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 380);
+
+        jPanel11.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel11.setLayout(null);
+        jPanel2.add(jPanel11);
+        jPanel11.setBounds(10, 10, 610, 380);
+
+        jPanel12.setBackground(new java.awt.Color(0, 51, 204));
+        jPanel12.setLayout(null);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jPanel12.add(jScrollPane3);
+        jScrollPane3.setBounds(62, 11, 452, 345);
+
+        jPanel2.add(jPanel12);
+        jPanel12.setBounds(10, 20, 610, 370);
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 630, 400));
 
@@ -279,7 +239,7 @@ public class Doctor_2 extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel5);
-        jPanel5.setBounds(860, 0, 20, 20);
+        jPanel5.setBounds(860, 0, 0, 0);
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 180));
 
@@ -296,6 +256,12 @@ public class Doctor_2 extends javax.swing.JFrame {
         jPanel6.setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jPanel4MouseClicked
 
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        reset();
+        jPanel8.setBackground(new Color(204,0,51));
+        jPanel7.setVisible(true);// TODO add your handling code here:
+    }//GEN-LAST:event_jPanel8MouseClicked
+
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel12MouseClicked
@@ -308,67 +274,21 @@ public class Doctor_2 extends javax.swing.JFrame {
         jPanel5.setVisible(false);       // TODO add your handling code here:
     }//GEN-LAST:event_jPanel3MouseEntered
 
-    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
         reset();
-        jPanel8.setBackground(new Color(204,0,51));
-        jPanel7.setVisible(true);// TODO add your handling code here:
-    }//GEN-LAST:event_jPanel8MouseClicked
+        jPanel9.setBackground(new Color(204,0,51));
+        jPanel12.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel9MouseClicked
     
     void reset()
     {
         jPanel4.setBackground(new Color(51,51,51));
         jPanel8.setBackground(new Color(51,51,51));
+        jPanel9.setBackground(new Color(51,51,51));
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
-    }
-    
-    
-    void setValues()
-    {
-        try
-        {
-            String sql = "SELECT * FROM INFO WHERE ID = ?";
-            PreparedStatement pst = co.prepareStatement(sql);
-            pst.setInt(1,user_id);
-            ResultSet rs = pst.executeQuery();
-            if(rs.next())
-            {
-                //The following lines of code depend on the database schema. Check once before executing
-                jLabel18.setText(Integer.toString(rs.getInt(1)));
-                jLabel19.setText(rs.getString(2));
-                jLabel20.setText(rs.getTimestamp(3).toString());
-                jLabel21.setText(rs.getString(4));
-                jLabel22.setText(Float.toString(rs.getFloat(5)));
-                jLabel23.setText(Float.toString(rs.getFloat(6)));
-                jLabel24.setText(rs.getString(7));
-                jLabel25.setText(rs.getString(8));
-                jLabel26.setText(rs.getString(9));
-            }
-        }
-        catch(SQLException e)
-        {
-            e.printStackTrace();
-        }
-                
-    }
-    
-    
-    void tableValues()
-    {
-        //depends on the database schema
-        try {
-            String sql = "SELECT * FROM VISITS WHERE PID = ?";
-            PreparedStatement pst = co.prepareStatement(sql);
-            pst.setInt(1,user_id);
-            ResultSet rs = pst.executeQuery();
-            if(rs.next())
-            {
-                //set table values according to table schema
-            }
-        } catch(SQLException e) {
-            e.printStackTrace();
-        }
-        
+        jPanel11.setVisible(false);
+        jPanel12.setVisible(false);
     }
     
     /**
@@ -401,31 +321,15 @@ public class Doctor_2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Doctor_2(user_id).setVisible(true);
+                new Nurse().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -434,6 +338,8 @@ public class Doctor_2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -441,7 +347,10 @@ public class Doctor_2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
 }
