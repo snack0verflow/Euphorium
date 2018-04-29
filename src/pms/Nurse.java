@@ -14,9 +14,7 @@ import javax.swing.table.DefaultTableModel;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
-import java.util.*;  
-import javax.mail.*;  
-import javax.mail.internet.*;  
+import java.util.*;   
 import javax.activation.*;  
 
 /**
@@ -207,37 +205,45 @@ public class Nurse extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setLayout(null);
 
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel44.setText("Blood Pressure");
         jPanel15.add(jLabel44);
-        jLabel44.setBounds(40, 10, 110, 14);
+        jLabel44.setBounds(40, 10, 110, 16);
 
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel45.setText("Breathing Rate");
         jPanel15.add(jLabel45);
-        jLabel45.setBounds(40, 50, 110, 14);
+        jLabel45.setBounds(40, 50, 110, 16);
 
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel46.setText("Heart Rate");
         jPanel15.add(jLabel46);
-        jLabel46.setBounds(40, 90, 90, 14);
+        jLabel46.setBounds(40, 90, 90, 16);
 
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel47.setText("Sugar Levels");
         jPanel15.add(jLabel47);
-        jLabel47.setBounds(40, 130, 100, 14);
+        jLabel47.setBounds(40, 130, 100, 16);
 
-        jLabel48.setText("Body Temperature");
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jLabel48.setText("Body Temperature(C)");
         jPanel15.add(jLabel48);
-        jLabel48.setBounds(40, 170, 140, 14);
+        jLabel48.setBounds(40, 170, 140, 16);
 
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel49.setText("WBC Count");
         jPanel15.add(jLabel49);
-        jLabel49.setBounds(40, 210, 90, 14);
+        jLabel49.setBounds(40, 210, 90, 16);
 
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel50.setText("RBC Count");
         jPanel15.add(jLabel50);
-        jLabel50.setBounds(40, 250, 100, 14);
+        jLabel50.setBounds(40, 250, 100, 16);
 
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel51.setText("Amount");
         jPanel15.add(jLabel51);
-        jLabel51.setBounds(40, 290, 100, 14);
+        jLabel51.setBounds(40, 290, 100, 16);
 
         jLabel52.setText("Genetic Conditions");
         jPanel15.add(jLabel52);
@@ -251,37 +257,45 @@ public class Nurse extends javax.swing.JFrame {
         jPanel15.add(jLabel54);
         jLabel54.setBounds(240, 360, 40, 14);
 
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel55.setText("jLabel18");
         jPanel15.add(jLabel55);
-        jLabel55.setBounds(230, 10, 70, 14);
+        jLabel55.setBounds(230, 10, 70, 16);
 
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel56.setText("jLabel18");
         jPanel15.add(jLabel56);
-        jLabel56.setBounds(230, 50, 70, 14);
+        jLabel56.setBounds(230, 50, 70, 16);
 
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel57.setText("jLabel18");
         jPanel15.add(jLabel57);
-        jLabel57.setBounds(230, 90, 70, 14);
+        jLabel57.setBounds(230, 90, 70, 16);
 
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel58.setText("jLabel18");
         jPanel15.add(jLabel58);
-        jLabel58.setBounds(230, 130, 70, 14);
+        jLabel58.setBounds(230, 130, 70, 16);
 
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel59.setText("jLabel18");
         jPanel15.add(jLabel59);
-        jLabel59.setBounds(230, 170, 70, 14);
+        jLabel59.setBounds(230, 170, 70, 16);
 
+        jLabel60.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel60.setText("jLabel18");
         jPanel15.add(jLabel60);
-        jLabel60.setBounds(230, 210, 70, 14);
+        jLabel60.setBounds(230, 210, 70, 16);
 
+        jLabel61.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel61.setText("jLabel18");
         jPanel15.add(jLabel61);
-        jLabel61.setBounds(230, 250, 70, 14);
+        jLabel61.setBounds(230, 250, 70, 16);
 
+        jLabel62.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel62.setText("jLabel18");
         jPanel15.add(jLabel62);
-        jLabel62.setBounds(230, 290, 70, 14);
+        jLabel62.setBounds(230, 290, 70, 16);
 
         jLabel63.setText("jLabel18");
         jPanel15.add(jLabel63);
@@ -291,13 +305,15 @@ public class Nurse extends javax.swing.JFrame {
         jPanel15.add(jSeparator3);
         jSeparator3.setBounds(310, 10, 10, 300);
 
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel64.setText("Patient Remarks");
         jPanel15.add(jLabel64);
-        jLabel64.setBounds(350, 10, 78, 14);
+        jLabel64.setBounds(350, 10, 85, 16);
 
+        jLabel65.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel65.setText("Doctor Remarks");
         jPanel15.add(jLabel65);
-        jLabel65.setBounds(350, 160, 90, 14);
+        jLabel65.setBounds(350, 160, 90, 16);
 
         jScrollPane3.setViewportView(jTextPane1);
 
@@ -312,13 +328,14 @@ public class Nurse extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(204, 0, 51));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Back");
+        jButton7.setBorder(null);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
             }
         });
         jPanel15.add(jButton7);
-        jButton7.setBounds(330, 300, 70, 23);
+        jButton7.setBounds(330, 300, 70, 15);
 
         jPanel7.add(jPanel15);
         jPanel15.setBounds(0, 0, 600, 330);
@@ -345,7 +362,10 @@ public class Nurse extends javax.swing.JFrame {
         jPanel7.add(jScrollPane2);
         jScrollPane2.setBounds(8, 59, 580, 270);
 
+        jButton6.setBackground(new java.awt.Color(204, 0, 51));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("View Details");
+        jButton6.setBorder(null);
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -521,39 +541,7 @@ public class Nurse extends javax.swing.JFrame {
 		//properties.put("mail.smtp.host", "smtp.gmail.com");
 		//properties.put("mail.smtp.port", "587");
 		
-		final String username = "fromeuphorium";  //username from GUI Eg: yournewdummymail
-		final String password = "thermosteel123";  //from GUI
-		String fromEmailAddress = "fromeuphorium@gmail.com";  // from GUI, Eg:yournewdummymail@gmail.com
-		String toEmailAddress = "syed.abid.abdullah@gmail.com";   //from GUI
-		String subject = "Feedback";  //subject of the message from GUI
-		String textMessage = jTextField11.getText(); // body of the message from GUI
-                String host = "smtp.gmail.com";//or IP address
-                Properties properties = System.getProperties();
-		properties.setProperty("mail.smtp.host", host);  
-                Session session = Session.getDefaultInstance(properties);  
-                
-		/*Session session = Session.getDefaultInstance(properties, new Authenticator(){
-			@Override
-			protected PasswordAuthentication getPasswordAuthentication(){
-				return new PasswordAuthentication(username, password);
-			}
-		});*/
 		
-		try{
-			MimeMessage message = new MimeMessage(session);
-			//message.setFrom(new InternetAddress(fromEmailAddress));
-			//message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmailAddress));
-			message.setFrom(new InternetAddress(fromEmailAddress));  
-                        message.addRecipient(Message.RecipientType.TO,new InternetAddress(toEmailAddress));
-                        message.setSubject(subject);
-			message.setText(textMessage);
-			Transport.send(message);
-			System.out.println("Message delivered successfully");
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
                 jPanel14.setVisible(false);
         
     }//GEN-LAST:event_jButton4MouseClicked

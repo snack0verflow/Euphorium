@@ -183,85 +183,105 @@ public class Patient extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setLayout(null);
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel8.setText("Patient ID");
         jPanel6.add(jLabel8);
-        jLabel8.setBounds(40, 10, 70, 14);
+        jLabel8.setBounds(40, 10, 70, 16);
 
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel9.setText("Name");
         jPanel6.add(jLabel9);
-        jLabel9.setBounds(40, 50, 60, 14);
+        jLabel9.setBounds(40, 50, 60, 16);
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel10.setText("Birthday");
         jPanel6.add(jLabel10);
-        jLabel10.setBounds(40, 90, 70, 14);
+        jLabel10.setBounds(40, 90, 70, 16);
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel11.setText("Sex");
         jPanel6.add(jLabel11);
-        jLabel11.setBounds(40, 130, 50, 14);
+        jLabel11.setBounds(40, 130, 50, 16);
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel13.setText("Height");
         jPanel6.add(jLabel13);
-        jLabel13.setBounds(40, 170, 60, 14);
+        jLabel13.setBounds(40, 170, 60, 16);
 
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel14.setText("Weight");
         jPanel6.add(jLabel14);
-        jLabel14.setBounds(40, 210, 60, 14);
+        jLabel14.setBounds(40, 210, 60, 16);
 
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel15.setText("Blood Type");
         jPanel6.add(jLabel15);
-        jLabel15.setBounds(40, 250, 80, 14);
+        jLabel15.setBounds(40, 250, 80, 16);
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel16.setText("Allergies");
         jPanel6.add(jLabel16);
-        jLabel16.setBounds(40, 290, 80, 14);
+        jLabel16.setBounds(40, 290, 80, 16);
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel17.setText("Genetic Conditions");
         jPanel6.add(jLabel17);
-        jLabel17.setBounds(40, 330, 120, 14);
+        jLabel17.setBounds(40, 330, 120, 16);
 
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel29.setText("Amount Spent");
         jPanel6.add(jLabel29);
-        jLabel29.setBounds(40, 360, 80, 14);
+        jLabel29.setBounds(40, 360, 80, 16);
 
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel18.setText("jLabel18");
         jPanel6.add(jLabel18);
-        jLabel18.setBounds(240, 360, 40, 14);
+        jLabel18.setBounds(240, 360, 160, 16);
 
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel19.setText("jLabel18");
         jPanel6.add(jLabel19);
-        jLabel19.setBounds(240, 10, 40, 14);
+        jLabel19.setBounds(240, 10, 160, 16);
 
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel20.setText("jLabel18");
         jPanel6.add(jLabel20);
-        jLabel20.setBounds(240, 50, 40, 14);
+        jLabel20.setBounds(240, 50, 160, 16);
 
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel21.setText("jLabel18");
         jPanel6.add(jLabel21);
-        jLabel21.setBounds(240, 90, 100, 14);
+        jLabel21.setBounds(240, 90, 220, 16);
 
+        jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel22.setText("jLabel18");
         jPanel6.add(jLabel22);
-        jLabel22.setBounds(240, 130, 40, 14);
+        jLabel22.setBounds(240, 130, 160, 16);
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel23.setText("jLabel18");
         jPanel6.add(jLabel23);
-        jLabel23.setBounds(240, 170, 40, 14);
+        jLabel23.setBounds(240, 170, 160, 16);
 
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel24.setText("jLabel18");
         jPanel6.add(jLabel24);
-        jLabel24.setBounds(240, 210, 40, 14);
+        jLabel24.setBounds(240, 210, 160, 16);
 
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel25.setText("jLabel18");
         jPanel6.add(jLabel25);
-        jLabel25.setBounds(240, 250, 40, 14);
+        jLabel25.setBounds(240, 250, 160, 16);
 
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel26.setText("jLabel18");
         jPanel6.add(jLabel26);
-        jLabel26.setBounds(240, 290, 40, 14);
+        jLabel26.setBounds(240, 290, 160, 16);
 
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel27.setText("jLabel18");
         jPanel6.add(jLabel27);
-        jLabel27.setBounds(240, 330, 40, 14);
+        jLabel27.setBounds(240, 330, 160, 16);
 
         jPanel2.add(jPanel6);
         jPanel6.setBounds(20, 10, 600, 380);
@@ -273,7 +293,7 @@ public class Patient extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable2);
 
         jPanel7.add(jScrollPane2);
-        jScrollPane2.setBounds(38, 14, 570, 360);
+        jScrollPane2.setBounds(-12, -6, 630, 390);
 
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 380);

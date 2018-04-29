@@ -14,9 +14,7 @@ import javax.swing.table.DefaultTableModel;
 import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
-import java.util.*;  
-import javax.mail.*;  
-import javax.mail.internet.*;  
+import java.util.*;
 import javax.activation.*;  
 import static pms.Nurse.buildTableModel;
 
@@ -366,19 +364,22 @@ public class Doctor extends javax.swing.JFrame {
         jPanel6.add(jTextField12);
         jTextField12.setBounds(20, 40, 60, 20);
 
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel32.setText("Patient ID");
         jPanel6.add(jLabel32);
-        jLabel32.setBounds(20, 20, 60, 14);
+        jLabel32.setBounds(20, 20, 60, 16);
 
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel33.setText("Doctor ID");
         jPanel6.add(jLabel33);
-        jLabel33.setBounds(100, 20, 60, 14);
+        jLabel33.setBounds(100, 20, 60, 16);
         jPanel6.add(jTextField13);
         jTextField13.setBounds(100, 40, 60, 20);
 
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel34.setText("BP");
         jPanel6.add(jLabel34);
-        jLabel34.setBounds(20, 90, 20, 14);
+        jLabel34.setBounds(20, 90, 20, 16);
 
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -388,57 +389,66 @@ public class Doctor extends javax.swing.JFrame {
         jPanel6.add(jTextField14);
         jTextField14.setBounds(20, 110, 60, 20);
 
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel35.setText("RBC");
         jPanel6.add(jLabel35);
-        jLabel35.setBounds(90, 90, 40, 14);
+        jLabel35.setBounds(90, 90, 40, 16);
         jPanel6.add(jTextField15);
         jTextField15.setBounds(90, 110, 60, 20);
 
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel36.setText("WBC");
         jPanel6.add(jLabel36);
-        jLabel36.setBounds(163, 90, 50, 14);
+        jLabel36.setBounds(163, 90, 50, 16);
         jPanel6.add(jTextField16);
         jTextField16.setBounds(160, 110, 70, 20);
 
+        jLabel37.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel37.setText("BRate");
         jPanel6.add(jLabel37);
-        jLabel37.setBounds(240, 90, 60, 14);
+        jLabel37.setBounds(240, 90, 60, 16);
         jPanel6.add(jTextField17);
         jTextField17.setBounds(240, 110, 70, 20);
 
+        jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel38.setText("HRate");
         jPanel6.add(jLabel38);
-        jLabel38.setBounds(320, 90, 60, 14);
+        jLabel38.setBounds(320, 90, 60, 16);
         jPanel6.add(jTextField18);
         jTextField18.setBounds(320, 110, 70, 20);
 
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel39.setText("Sugar");
         jPanel6.add(jLabel39);
-        jLabel39.setBounds(400, 90, 80, 14);
+        jLabel39.setBounds(400, 90, 80, 16);
         jPanel6.add(jTextField19);
         jTextField19.setBounds(400, 110, 90, 20);
 
+        jLabel40.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel40.setText("Temp");
         jPanel6.add(jLabel40);
-        jLabel40.setBounds(500, 90, 50, 14);
+        jLabel40.setBounds(500, 90, 50, 16);
         jPanel6.add(jTextField20);
         jTextField20.setBounds(500, 110, 90, 20);
 
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel41.setText("Amount Spent");
         jPanel6.add(jLabel41);
-        jLabel41.setBounds(180, 20, 90, 14);
+        jLabel41.setBounds(180, 20, 90, 16);
         jPanel6.add(jTextField21);
         jTextField21.setBounds(180, 40, 80, 20);
 
+        jLabel42.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel42.setText("Patient Remarks");
         jPanel6.add(jLabel42);
-        jLabel42.setBounds(20, 160, 100, 14);
+        jLabel42.setBounds(20, 160, 100, 16);
         jPanel6.add(jTextField22);
         jTextField22.setBounds(20, 180, 570, 20);
 
+        jLabel43.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jLabel43.setText("Doctor's Remarks");
         jPanel6.add(jLabel43);
-        jLabel43.setBounds(20, 230, 110, 14);
+        jLabel43.setBounds(20, 230, 110, 16);
         jPanel6.add(jTextField23);
         jTextField23.setBounds(20, 250, 570, 20);
 
@@ -556,13 +566,14 @@ public class Doctor extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(204, 0, 51));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("Back");
+        jButton7.setBorder(null);
         jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton7MouseClicked(evt);
             }
         });
         jPanel15.add(jButton7);
-        jButton7.setBounds(330, 300, 70, 23);
+        jButton7.setBounds(330, 300, 70, 15);
 
         jPanel7.add(jPanel15);
         jPanel15.setBounds(0, 0, 600, 330);
@@ -589,7 +600,10 @@ public class Doctor extends javax.swing.JFrame {
         jPanel7.add(jScrollPane2);
         jScrollPane2.setBounds(8, 59, 580, 270);
 
+        jButton6.setBackground(new java.awt.Color(204, 0, 51));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("View Details");
+        jButton6.setBorder(null);
         jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton6MouseClicked(evt);
@@ -1014,44 +1028,7 @@ public class Doctor extends javax.swing.JFrame {
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
                 
-		//properties.put("mail.smtp.auth", "true");
-		//properties.put("mail.smtp.starttls.enable", "true");
-		//properties.put("mail.smtp.host", "smtp.gmail.com");
-		//properties.put("mail.smtp.port", "587");
 		
-		final String username = "fromeuphorium";  //username from GUI Eg: yournewdummymail
-		final String password = "thermosteel123";  //from GUI
-		String fromEmailAddress = "fromeuphorium@gmail.com";  // from GUI, Eg:yournewdummymail@gmail.com
-		String toEmailAddress = "syed.abid.abdullah@gmail.com";   //from GUI
-		String subject = "Feedback";  //subject of the message from GUI
-		String textMessage = jTextField11.getText(); // body of the message from GUI
-                String host = "smtp.gmail.com";//or IP address
-                Properties properties = System.getProperties();
-		properties.setProperty("mail.smtp.host", host);  
-                Session session = Session.getDefaultInstance(properties);  
-                
-		/*Session session = Session.getDefaultInstance(properties, new Authenticator(){
-			@Override
-			protected PasswordAuthentication getPasswordAuthentication(){
-				return new PasswordAuthentication(username, password);
-			}
-		});*/
-		
-		try{
-			MimeMessage message = new MimeMessage(session);
-			//message.setFrom(new InternetAddress(fromEmailAddress));
-			//message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmailAddress));
-			message.setFrom(new InternetAddress(fromEmailAddress));  
-                        message.addRecipient(Message.RecipientType.TO,new InternetAddress(toEmailAddress));
-                        message.setSubject(subject);
-			message.setText(textMessage);
-			Transport.send(message);
-			System.out.println("Message delivered successfully");
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
                 jPanel14.setVisible(false);
         
     }//GEN-LAST:event_jButton4MouseClicked
