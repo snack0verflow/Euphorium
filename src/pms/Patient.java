@@ -7,8 +7,10 @@ package pms;
 
 import java.awt.Color;
 import java.sql.*;
+import java.util.Vector;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -19,13 +21,53 @@ public class Patient extends javax.swing.JFrame {
     /**
      * Creates new form Doctor
      */
+    public static DefaultTableModel buildTableModel(ResultSet rs)
+        {
+            Vector<String> columnNames= new Vector<String>();
+            Vector<Vector<Object>> data= new Vector<Vector<Object>>();
+            try{
+            ResultSetMetaData metaData = rs.getMetaData();
+            
+            
+            int columnCount = metaData.getColumnCount();
+            for (int column = 1; column <= columnCount; column++) {
+                columnNames.add(metaData.getColumnName(column));
+            }
+
+            
+            while (rs.next()) {
+                Vector<Object> vector = new Vector<Object>();
+                for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
+                    vector.add(rs.getObject(columnIndex));
+                }
+                data.add(vector);
+            }
+            }
+            catch(Exception e)
+            {
+                e.printStackTrace();
+            }
+            return new DefaultTableModel(data, columnNames);
+            
+            
+
+        }
     static Connection co = null; 
     static int user_id = 0;
+    ResultSet kk;
     public Patient(int id) {
         co = SqlConn.dbCon();
         user_id = id;
         //System.out.println(user_id);
-        
+        try
+        {
+        PreparedStatement pst=co.prepareStatement("select * from visits where pid="+user_id);
+        kk=pst.executeQuery();
+        }
+        catch(Exception e)
+        {
+         e.printStackTrace();
+        }
         initComponents();
         setValues();
         jPanel3.setBackground(new Color(0,0,0,100));
@@ -79,6 +121,8 @@ public class Patient extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -222,24 +266,14 @@ public class Patient extends javax.swing.JFrame {
         jPanel2.add(jPanel6);
         jPanel6.setBounds(20, 10, 600, 380);
 
-        jPanel7.setBackground(new java.awt.Color(0, 204, 153));
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
+        jTable2.setModel(buildTableModel(kk));
         jScrollPane2.setViewportView(jTable2);
 
         jPanel7.add(jScrollPane2);
-        jScrollPane2.setBounds(38, 14, 452, 355);
+        jScrollPane2.setBounds(38, 14, 570, 360);
 
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 380);
@@ -296,6 +330,27 @@ public class Patient extends javax.swing.JFrame {
         jPanel3.add(jPanel5);
         jPanel5.setBounds(860, 0, 20, 20);
 
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Back_Arrow_32px_2.png"))); // NOI18N
+        jLabel28.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel28MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel28);
+        jLabel28.setBounds(10, 140, 32, 30);
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Logout");
+        jLabel30.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel30MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel30);
+        jLabel30.setBounds(30, 135, 100, 40);
+
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 180));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/pediatric1.jpg"))); // NOI18N
@@ -327,7 +382,27 @@ public class Patient extends javax.swing.JFrame {
         reset();
         jPanel8.setBackground(new Color(204,0,51));
         jPanel7.setVisible(true);// TODO add your handling code here:
+        try
+        {
+        PreparedStatement pst=co.prepareStatement("select * from visits where pid="+user_id);
+        kk=pst.executeQuery();
+        }
+        catch(Exception e)
+        {
+         e.printStackTrace();
+        }
+        
     }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jLabel28MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel28MouseClicked
+        this.dispose();
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jLabel28MouseClicked
+
+    private void jLabel30MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel30MouseClicked
+        this.dispose();
+        new Home().setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel30MouseClicked
     
     void reset()
     {
@@ -453,8 +528,10 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
