@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Abid
  */
-public class Patient extends javax.swing.JFrame {
+public class Patient extends javax.swing.JFrame implements User {
 
     /**
      * Creates new form Doctor
@@ -31,7 +31,7 @@ public class Patient extends javax.swing.JFrame {
             
             int columnCount = metaData.getColumnCount();
             for (int column = 1; column <= columnCount; column++) {
-                columnNames.add(metaData.getColumnName(column));
+                columnNames.add(metaData.getColumnLabel(column));
             }
 
             
@@ -61,7 +61,7 @@ public class Patient extends javax.swing.JFrame {
         //System.out.println(user_id);
         try
         {
-        PreparedStatement pst=co.prepareStatement("select * from visits where pid="+user_id);
+        PreparedStatement pst=co.prepareStatement("select vid as 'Visit ID',pid as 'Patient ID',did as 'Doctor ID',datetime as 'Date Time' from visits where pid="+user_id);
         kk=pst.executeQuery();
         }
         catch(Exception e)
@@ -72,6 +72,7 @@ public class Patient extends javax.swing.JFrame {
         setValues();
         jPanel3.setBackground(new Color(0,0,0,100));
         jPanel7.setVisible(false);
+        jPanel15.setVisible(false);
         
     }
 
@@ -114,6 +115,36 @@ public class Patient extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
+        jButton7 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -289,11 +320,143 @@ public class Patient extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(null);
 
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setLayout(null);
+
+        jLabel44.setText("Blood Pressure");
+        jPanel15.add(jLabel44);
+        jLabel44.setBounds(40, 10, 110, 16);
+
+        jLabel45.setText("Breathing Rate");
+        jPanel15.add(jLabel45);
+        jLabel45.setBounds(40, 50, 110, 16);
+
+        jLabel46.setText("Heart Rate");
+        jPanel15.add(jLabel46);
+        jLabel46.setBounds(40, 90, 90, 16);
+
+        jLabel47.setText("Sugar Levels");
+        jPanel15.add(jLabel47);
+        jLabel47.setBounds(40, 130, 100, 16);
+
+        jLabel48.setText("Body Temperature");
+        jPanel15.add(jLabel48);
+        jLabel48.setBounds(40, 170, 140, 16);
+
+        jLabel49.setText("WBC Count");
+        jPanel15.add(jLabel49);
+        jLabel49.setBounds(40, 210, 90, 16);
+
+        jLabel50.setText("RBC Count");
+        jPanel15.add(jLabel50);
+        jLabel50.setBounds(40, 250, 100, 16);
+
+        jLabel51.setText("Amount");
+        jPanel15.add(jLabel51);
+        jLabel51.setBounds(40, 290, 100, 16);
+
+        jLabel52.setText("Genetic Conditions");
+        jPanel15.add(jLabel52);
+        jLabel52.setBounds(40, 330, 120, 16);
+
+        jLabel53.setText("Amount Spent");
+        jPanel15.add(jLabel53);
+        jLabel53.setBounds(40, 360, 80, 16);
+
+        jLabel54.setText("jLabel18");
+        jPanel15.add(jLabel54);
+        jLabel54.setBounds(240, 360, 48, 16);
+
+        jLabel55.setText("jLabel18");
+        jPanel15.add(jLabel55);
+        jLabel55.setBounds(230, 10, 70, 16);
+
+        jLabel56.setText("jLabel18");
+        jPanel15.add(jLabel56);
+        jLabel56.setBounds(230, 50, 70, 16);
+
+        jLabel57.setText("jLabel18");
+        jPanel15.add(jLabel57);
+        jLabel57.setBounds(230, 90, 70, 16);
+
+        jLabel58.setText("jLabel18");
+        jPanel15.add(jLabel58);
+        jLabel58.setBounds(230, 130, 70, 16);
+
+        jLabel59.setText("jLabel18");
+        jPanel15.add(jLabel59);
+        jLabel59.setBounds(230, 170, 70, 16);
+
+        jLabel60.setText("jLabel18");
+        jPanel15.add(jLabel60);
+        jLabel60.setBounds(230, 210, 70, 16);
+
+        jLabel61.setText("jLabel18");
+        jPanel15.add(jLabel61);
+        jLabel61.setBounds(230, 250, 70, 16);
+
+        jLabel62.setText("jLabel18");
+        jPanel15.add(jLabel62);
+        jLabel62.setBounds(230, 290, 70, 16);
+
+        jLabel63.setText("jLabel18");
+        jPanel15.add(jLabel63);
+        jLabel63.setBounds(240, 330, 48, 16);
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        jPanel15.add(jSeparator3);
+        jSeparator3.setBounds(310, 10, 10, 300);
+
+        jLabel64.setText("Patient Remarks");
+        jPanel15.add(jLabel64);
+        jLabel64.setBounds(350, 10, 93, 16);
+
+        jLabel65.setText("Doctor Remarks");
+        jPanel15.add(jLabel65);
+        jLabel65.setBounds(350, 160, 90, 16);
+
+        jScrollPane3.setViewportView(jTextPane1);
+
+        jPanel15.add(jScrollPane3);
+        jScrollPane3.setBounds(350, 30, 200, 100);
+
+        jScrollPane4.setViewportView(jTextPane2);
+
+        jPanel15.add(jScrollPane4);
+        jScrollPane4.setBounds(350, 180, 200, 100);
+
+        jButton7.setBackground(new java.awt.Color(204, 0, 51));
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setText("Back");
+        jButton7.setBorder(null);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jPanel15.add(jButton7);
+        jButton7.setBounds(330, 300, 70, 17);
+
+        jPanel7.add(jPanel15);
+        jPanel15.setBounds(0, 0, 600, 330);
+
+        jButton6.setBackground(new java.awt.Color(204, 0, 51));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("View Details");
+        jButton6.setBorder(null);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+        jPanel7.add(jButton6);
+        jButton6.setBounds(470, 330, 110, 30);
+
         jTable2.setModel(buildTableModel(kk));
         jScrollPane2.setViewportView(jTable2);
 
         jPanel7.add(jScrollPane2);
-        jScrollPane2.setBounds(-12, -6, 630, 390);
+        jScrollPane2.setBounds(8, -6, 590, 330);
 
         jPanel2.add(jPanel7);
         jPanel7.setBounds(10, 10, 610, 380);
@@ -423,6 +586,41 @@ public class Patient extends javax.swing.JFrame {
         this.dispose();
         new Home().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel30MouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+        jPanel15.setVisible(false);
+    }//GEN-LAST:event_jButton7MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        jPanel15.setVisible(true);
+        int column = 0;
+        int row = jTable2.getSelectedRow();
+        int id = (int) jTable2.getModel().getValueAt(row, column);
+        try
+        {
+            PreparedStatement pst=co.prepareStatement("select bp,br,hr,bs,temp,wbc,rbc,amount,p_rem,d_rem from visits where vid="+id);
+            ResultSet rs=pst.executeQuery();
+            if(rs.next())
+            {
+                jLabel55.setText(rs.getString(1));
+                jLabel56.setText(rs.getString(2));
+                jLabel57.setText(rs.getString(3));
+                jLabel58.setText(rs.getString(4));
+                jLabel59.setText(rs.getString(5));
+                jLabel60.setText(rs.getString(6));
+                jLabel61.setText(rs.getString(7));
+                jLabel62.setText(rs.getString(8));
+                jTextPane1.setText(rs.getString(9));
+                jTextPane2.setText(rs.getString(10));
+            }
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+    }//GEN-LAST:event_jButton6MouseClicked
     
     void reset()
     {
@@ -528,6 +726,8 @@ public class Patient extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -553,12 +753,35 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -567,6 +790,11 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     // End of variables declaration//GEN-END:variables
 }

@@ -105,7 +105,7 @@ public class Home extends javax.swing.JFrame {
         jPasswordField2.setCaretColor(new java.awt.Color(255, 255, 255));
         jPasswordField2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         jPanel3.add(jPasswordField2);
-        jPasswordField2.setBounds(30, 190, 200, 14);
+        jPasswordField2.setBounds(30, 190, 200, 16);
 
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator4);
@@ -136,7 +136,7 @@ public class Home extends javax.swing.JFrame {
         jPasswordField3.setBorder(null);
         jPasswordField3.setCaretColor(new java.awt.Color(255, 255, 255));
         jPanel3.add(jPasswordField3);
-        jPasswordField3.setBounds(30, 260, 200, 14);
+        jPasswordField3.setBounds(30, 260, 200, 16);
 
         jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jSeparator5);
@@ -317,7 +317,7 @@ public class Home extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Smart patient monitoring system");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(181, 247, 204, 19);
+        jLabel4.setBounds(181, 247, 202, 19);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pms/icons8_Move_20px_1.png"))); // NOI18N
         jLabel7.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -419,8 +419,6 @@ public class Home extends javax.swing.JFrame {
         String q="select * from cred where username=?";
 				PreparedStatement pst=co.prepareStatement(q);
 				pst.setString(1, jTextField3.getText() );
-				//pst.setString(2, jPasswordField2.getText());
-                                System.out.println(jTextField3.getText());
 				ResultSet rs=pst.executeQuery();
 				int c=0;
                                 String role="";

@@ -21,7 +21,7 @@ import javax.activation.*;
  *
  * @author Abid
  */
-public class Nurse extends javax.swing.JFrame {
+public class Nurse extends javax.swing.JFrame implements User {
 
     /**
      * Creates new form Doctor
@@ -44,7 +44,7 @@ public class Nurse extends javax.swing.JFrame {
         }
         try
         {
-            res=co.prepareStatement("select vid, pid, did, datetime from visits").executeQuery();
+            res=co.prepareStatement("select vid as 'Visit ID',pid as 'Patient ID',did as 'Doctor ID',datetime as 'Date Time' from visits").executeQuery();
         }
         catch(Exception e)
         {
@@ -499,7 +499,7 @@ public class Nurse extends javax.swing.JFrame {
         reset();
         try
         {
-            res=co.prepareStatement("select vid, pid, did, datetime from visits").executeQuery();
+            res=co.prepareStatement("select vid as 'Visit ID',pid as 'Patient ID',did as 'Doctor ID',datetime as 'Date Time' from visits").executeQuery();
         }
         catch(Exception e)
         {
@@ -597,7 +597,7 @@ public class Nurse extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jLabel66MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel66MouseClicked
-        String sql="(SELECT vID, PID,did,datetime FROM VISITS WHERE D_REM LIKE '%"+jTextField24.getText()+"%') union (select vid,pid,did,datetime from visits where pid in (select id from info where name like '%"+jTextField24.getText()+"%'));";
+        String sql="(select vid as 'Visit ID',pid as 'Patient ID',did as 'Doctor ID',datetime as 'Date Time' from visits WHERE D_REM LIKE '%"+jTextField24.getText()+"%') union (select vid as 'Visit ID',pid as 'Patient ID',did as 'Doctor ID',datetime as 'Date Time' from visits where pid in (select id from info where name like '%"+jTextField24.getText()+"%'));";
         
         try{
         PreparedStatement pst= co.prepareStatement(sql);
@@ -700,7 +700,7 @@ public class Nurse extends javax.swing.JFrame {
             
             int columnCount = metaData.getColumnCount();
             for (int column = 1; column <= columnCount; column++) {
-                columnNames.add(metaData.getColumnName(column));
+                columnNames.add(metaData.getColumnLabel(column));
             }
 
             

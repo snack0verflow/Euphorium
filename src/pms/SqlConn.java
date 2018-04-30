@@ -1,9 +1,6 @@
 package pms;
 
 import java.sql.*;
-import java.util.*;
-
-import javax.swing.JOptionPane;
 public class SqlConn
 {
 	Connection con=null;
@@ -12,7 +9,7 @@ public class SqlConn
 		try 
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/euphorium?useSSL=false&"+"user=system&password=manager");
+			Connection con=DriverManager.getConnection("jdbc:mysql://localhost/euphorium?useSSL=false&"+"user=root&password=080910");
 			//JOptionPane.showMessageDialog(null, "connected");
 			return con;
 		}
